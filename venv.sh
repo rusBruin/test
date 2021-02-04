@@ -1,7 +1,18 @@
 # Simple Virtual Environment in Python
 
+pip3 list
+pip freeze
+python3 -m venv venv
+pip3 install -r requirements.txt # if it exits
+pip3 install ...  
+pip3 freeze > requirements.txt
+deactivate
+rm -rf venv
 
-#
+
+
+# Detailed Example
+
 # 1. First, sometimes venv has to be installed even though it's supposed to be included
 # with basic Python installation
 
@@ -38,7 +49,8 @@ pip3 list
 
 pip freeze
 
-pip freeze > requirements.txt
+pip3 freeze > requirements.txt
+cat requirements.txt
 
 # 7. To deactivate an environment simpy type deactivate
 
@@ -48,7 +60,13 @@ deactivate
 
 rm -rf websrape
 
+# 9. To recreate an environment with the same packages 
 
+python3 -m venv pyproj/venv  # we'll call the environment venv and place it inside pyproj
+source pyproj/venv/bin/activate
+pip3 install -r requirements.txt
+
+pip3 list # to check if all are installed
 
 
 
