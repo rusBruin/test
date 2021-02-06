@@ -9,6 +9,10 @@ pip3 freeze > requirements.txt
 deactivate
 rm -rf venv
 
+# To add the new enivronment to Jupyter
+
+(venv) $ ipython kernel install --user --name=venv
+
 
 
 # Detailed Example
